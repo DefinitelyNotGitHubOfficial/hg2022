@@ -1,7 +1,6 @@
 <template>
  
   <div>
-     <!-- <Tutorial/> -->
      <span>here is a thing</span>
   </div>
 </template>
