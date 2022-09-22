@@ -40,7 +40,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/proxy'
   ],
 
   styleResources: {
@@ -49,5 +50,18 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  axios: {
+    // Do away with the baseUrl when using proxy
+    baseURL: 'https://demo.jaredfuller.com/',
+    proxyHeaders: false,
+    credentials: false
+   },
+ 
+  //  proxy: {
+  //   '/api/': {
+  //     target: 'https://demo.jaredfuller.com/hg/',
+  //     pathRewrite: { '^/api/': '/posts/1' }
+  //   },
+  //  },
 }
