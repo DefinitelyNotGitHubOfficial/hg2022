@@ -1,5 +1,6 @@
 <template>
   <div style="width:600px; margin:auto;">
+    
     <Listings :selectedData="this.sortedData" />
   </div>
 </template>
