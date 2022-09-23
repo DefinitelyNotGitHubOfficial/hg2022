@@ -2,9 +2,9 @@
     <div id="listings">
         <div class="listing" v-for="item in selectedData">
             <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
-                <div class="type" v-if="item.type == 'Attraction'"><div><span class="material-symbols-outlined">attractions</span>{{item.type}}</div></div>
-                <div class="type" v-if="item.type == 'Event'"><div><span class="material-symbols-outlined">festival</span>{{item.type}}</div></div>
-                <div class="type" v-if="item.type == 'Movie'"><div><span class="material-symbols-outlined mov">movie</span>{{item.type}}</div></div>
+                <div class="type" v-if="item.type == 'Attraction'"><div><span class="material-symbols-outlined">attractions</span>{{item.type[0]}}</div></div>
+                <div class="type" v-if="item.type == 'Event'"><div><span class="material-symbols-outlined">festival</span>{{item.type[0]}}</div></div>
+                <div class="type" v-if="item.type == 'Movie'"><div><span class="material-symbols-outlined mov">movie</span>{{item.type[0]}}</div></div>
             </div>
             <div class="title">{{item.title}}</div>
             <div class="dates">
@@ -38,6 +38,9 @@
     }
 </script>
 <style lang="scss" scoped>
+    #listings {
+        color: $green;
+    }
     .listing {
         background-color: $purple;
         width:100%;
