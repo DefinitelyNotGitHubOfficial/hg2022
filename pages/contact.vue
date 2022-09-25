@@ -1,7 +1,7 @@
 <template>
  
   <div class="contact">
-    <nuxt-link to="http://localhost:3000/" class="close" @click="this.$nuxt.refresh()">x</nuxt-link>
+    <a href="http://www.hairyghost.com" class="close" @click="this.$nuxt.refresh()">x</a>
     <h1>Contact</h1>
     <p>Hello!</p> <p>Please let me know if I'm missing something, I'm here to help and I appreciate your help.</p>
     

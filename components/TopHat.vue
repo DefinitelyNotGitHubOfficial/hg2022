@@ -96,6 +96,10 @@
             justify-content: center;
             align-items: center;
         }
+        a {
+            color:$purple;
+            text-decoration: none;
+        }
     }
     h1 {
         font-family: 'Creepster', cursive;
