@@ -1,13 +1,20 @@
 <template>
   <div class="wrapper">
-    <br /> <br /> <br /> <br /> <br />
+
+    <TopHat />  
+    <!-- <span style="color:white">
+    {{this.selectedDay}}
+    {{this.today}}
+    </span> -->
     <div class="horibazontabagal">
       <div class="main">
+        <WeekView :selectedDay="this.selectedDay" />
         <Listings :selectedData="this.sortedData" />
       </div>
       <div class="side">
-        <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData"/>
-        <Calendar />
+        <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay"/>
+        <Calendar :availability="this.availability" :selectedDay="this.selectedDay" />
+        
         <Twitter />
       </div>
     </div>
@@ -24,9 +31,10 @@
         allListingsData:[],
         reformedData:[],
         sortedData:[],
-        selectedDay:'nothing',
+        selectedDay:'',
         today: '',
-        currentData:[]
+        currentData:[],
+        availability:[]
       }
     },
     async fetch() {
@@ -57,7 +65,8 @@
         }
       })
       //get the current date
-      this.today = "2022-09-22"
+      //this.today = "2022-09-22"
+
       //this.sortedData = this.reformedData.filter(x => x.dates == this.today)
       this.reformedData.forEach((el) => {
         if(el.dates.split(', ').filter(x => x == this.today).length > 0){
@@ -65,14 +74,45 @@
           this.currentData.push(el)
         }
       })
+      //get all days with stuff for calendar
+      //this.availability = [...new Set(this.availability.EventDates)];
+      var alldatesCombined = []
+     
+      this.reformedData.forEach((el) => {
+        //alldatesCombined = [...new Set(el.dates.split(", "))];
+        this.availability = this.availability.concat(el.dates.split(", ")) //[...el.dates.split(", ")]
+        //console.log(el.dates.split(', ')) 
+      })
+      this.availability =  [...new Set(this.availability)]
+
     },
     created() {
-      this.$nuxt.$on('sortedData', ($event) => this.select($event))
+      this.$nuxt.$on('sortedData', ($event) => this.filter($event))
+      this.$nuxt.$on('selectedDay', ($event) => this.select($event))
+      const date = new Date();
+      this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${date.getDate()}`
+      this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${date.getDate()}`
     },
     methods: {
-      select(e) {
+      filter(e) {
         this.sortedData = e
-      }
+      },
+      select(e) { 
+        this.selectedDay = e
+      },
+    },
+    watch: { 
+        selectedDay: function(newVal, oldVal) { // watch it
+          this.currentData = []
+          this.sortedData = []
+          //console.log(this.reformedData)
+          this.reformedData.forEach((el) => {
+            if(el.dates.split(', ').filter(x => x == this.selectedDay).length > 0){
+              this.currentData.push(el)
+              this.sortedData.push(el)
+            }
+          })
+        }
     }
   }
 </script>

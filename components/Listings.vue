@@ -1,29 +1,37 @@
 <template>
     <div id="listings">
-        <div class="listing" v-for="item in selectedData">
-            <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
-                <div class="type" v-if="item.type == 'Attraction'"><div><span class="material-symbols-outlined">attractions</span>{{item.type[0]}}</div></div>
-                <div class="type" v-if="item.type == 'Event'"><div><span class="material-symbols-outlined">festival</span>{{item.type[0]}}</div></div>
-                <div class="type" v-if="item.type == 'Movie'"><div><span class="material-symbols-outlined mov">movie</span>{{item.type[0]}}</div></div>
-            </div>
-            <div class="title">{{item.title}}</div>
-            <div class="dates">
-                <span class="material-symbols-outlined">calendar_today</span>{{item.displayDates}}  &nbsp;•&nbsp; 
-                {{item.times}}
-            </div>
-            <div class="desc">{{item.desc}}</div>
-            <div class="link">
-                <span class="material-symbols-outlined mov">link</span>
-                <a :href="item.url" target="_blank">{{item.website}}</a>
-            </div>
-            <div class="meta">
-                <div class="pill">
-                    <div><span class="material-symbols-outlined">location_on</span>{{item.location}}</div>
+        <div v-if="selectedData.length > 0">
+            <div class="listing" v-for="item in selectedData">
+                <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
+                    <div class="type" v-if="item.type == 'Attraction'"><div><span class="material-symbols-outlined">attractions</span>{{item.type[0]}}</div></div>
+                    <div class="type" v-if="item.type == 'Event'"><div><span class="material-symbols-outlined">festival</span>{{item.type[0]}}</div></div>
+                    <div class="type" v-if="item.type == 'Movie'"><div><span class="material-symbols-outlined mov">movie</span>{{item.type[0]}}</div></div>
                 </div>
-                <div class="pill">{{item.costs}}</div>
-                <div class="pill"><span class="material-symbols-outlined">escalator_warning</span>{{item.age}}</div>
+                <div class="title">{{item.title}}</div>
+                <div class="dates">
+                    <span class="material-symbols-outlined">calendar_today</span>{{item.displayDates}}  &nbsp;•&nbsp; 
+                    {{item.times}}
+                </div>
+                <div class="desc">{{item.desc}}</div>
+                <div class="link">
+                    <span class="material-symbols-outlined mov">link</span>
+                    <a :href="item.url" target="_blank">{{item.website}}</a>
+                </div>
+                <div class="meta">
+                    <div class="pill">
+                        <div><span class="material-symbols-outlined">location_on</span>{{item.location}}</div>
+                    </div>
+                    <div class="pill">{{item.costs}}</div>
+                    <div class="pill"><span class="material-symbols-outlined">escalator_warning</span>{{item.age}}</div>
+                </div>
             </div>
         </div>
+        <div v-else>
+            <div class="message">
+                <span class="material-symbols-outlined">report</span>
+                Nothing showing up here.  Try changing the date or filters.</div>
+        </div>
+        <!-- <div v-else>no listings</div> -->
     </div>
 </template>
 <script>
@@ -138,6 +146,19 @@
         }
         .material-symbols-outlined {
             margin-top:-2px;
+            padding-right:3px;
+        }
+    }
+    .message {
+        color:$purple;
+        background-color: $green;
+        padding:15px;
+        border-radius:4px;
+        font-weight: 300;
+        display:flex;
+        align-items: center;
+        .material-symbols-outlined {
+            font-size:1.2rem;
             padding-right:3px;
         }
     }

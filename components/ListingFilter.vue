@@ -27,7 +27,12 @@
                 type: Array,
                 required: true,
                 default: () =>{}
-            }
+            },
+            selectedDay:{
+                type: String,
+                required: true,
+                default: () => {}
+            },
         },
         methods: {
             adjust(array, value) {
@@ -59,7 +64,19 @@
         },
         data(){
             return {
-                types:['Attraction', 'Event', 'Movie'],
+                types:['Attraction', 'Event', 'Movie']
+            }
+        },
+        watch: { 
+      	    selectedDay: function(newVal, oldVal) { // watch it
+                //console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+                this.types = ['Attraction', 'Event', 'Movie']
+                // source.checked
+                var boxes = document.querySelectorAll('input')
+                // /console.log(boxes)
+                boxes.forEach((el) => {
+                    el.checked = true
+                })
             }
         }
     }
@@ -73,7 +90,7 @@
     color: $green;
 }
 .title {
-    padding:10px 0px;
+    padding:4px 0px;
     text-align:center;
     border-bottom:1px dotted $green;
     display:flex;
