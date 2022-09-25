@@ -130,7 +130,8 @@ export default {
 <style lang="scss" scoped>
 
     .calendar {
-        max-width:300px;
+        //max-width:300px;
+        width:100%;
         background-color:$purple;
         color: $green;
         border-radius:3px;

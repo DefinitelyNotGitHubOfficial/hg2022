@@ -1,41 +1,44 @@
 <template>
     <div class="twitter">
         <div class="header">
-            <a href="#" target="_blank">@HairyGhost</a>
+            <a href="https://twitter.com/HairyGhost" target="_blank">@HairyGhost</a>
         </div>
-        <div class="tweet" v-for="item in rendered">
-            <div class="status"><span v-if="item.type"><img src="images/retweet.svg" />Retweeted</span></div>
-            <div class="profile">
-                <img :src="item.profile" />
-            </div>
-            <div class="content">
-                <div class="name">{{item.name}}</div>
-                <div class="user"><span>@</span>{{item.userName}}</div>
-                <div class="date"><span>•</span> {{formatDate(item.date)}}</div>
-                <div class="message">
-                    <a :href="`https://twitter.com/HairyGhost/status/${item.link}`" target="_blank">
-                        {{item.text}}
-                    </a>
+        <div class="scrollWindow">
+            <div class="tweet" v-for="item in rendered">
+                <div class="status"><span v-if="item.type"><img src="images/retweet.svg" />Retweeted</span></div>
+                <div class="profile">
+                    <img :src="item.profile" />
                 </div>
-                <div class="meta">
-                    <div>
+                <div class="content">
+                    <div class="name">{{item.name}}</div>
+                    <div class="user"><span>@</span>{{item.userName}}</div>
+                    <div class="date"><span>•</span> {{formatDate(item.date)}}</div>
+                    <div class="message">
                         <a :href="`https://twitter.com/HairyGhost/status/${item.link}`" target="_blank">
-                            <img src="images/comment.svg" />{{formatNum(item.reply)}}
+                            {{item.text}}
                         </a>
                     </div>
-                    <div>
-                        <a :href="`https://twitter.com/HairyGhost/status/${item.link}`" target="_blank">
-                            <img src="images/retweet.svg" />{{formatNum(item.retweet)}}
-                        </a>
-                    </div>
-                    <div>
-                        <a :href="`https://twitter.com/HairyGhost/status/${item.link}`" target="_blank">
-                            <img src="images/like.svg" />{{formatNum(item.like)}}
-                        </a>
+                    <div class="meta">
+                        <div>
+                            <a :href="`https://twitter.com/HairyGhost/status/${item.link}`" target="_blank">
+                                <img src="images/comment.svg" />{{formatNum(item.reply)}}
+                            </a>
+                        </div>
+                        <div>
+                            <a :href="`https://twitter.com/HairyGhost/status/${item.link}`" target="_blank">
+                                <img src="images/retweet.svg" />{{formatNum(item.retweet)}}
+                            </a>
+                        </div>
+                        <div>
+                            <a :href="`https://twitter.com/HairyGhost/status/${item.link}`" target="_blank">
+                                <img src="images/like.svg" />{{formatNum(item.like)}}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 <script>
@@ -198,7 +201,7 @@ export default {
             font-size:.5rem;
             line-height:1rem;
             display:inline-block;
-            position: absolute;
+            //position: absolute;
             margin: 1px 0 0 -8px;
         }
     }
@@ -215,7 +218,7 @@ export default {
     .user {
         padding-left:10px;
         span {
-            position: absolute;
+            //position: absolute;
             margin-left:-12px;
             margin-top:-1px;
             font-size:.8rem;
@@ -280,6 +283,10 @@ export default {
                 transition: color .3s;
             }
         }
+    }
+    .scrollWindow {
+         max-height:500px;
+        overflow-y:scroll;
     }
     .header {
         padding:7px 0;

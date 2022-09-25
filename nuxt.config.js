@@ -41,7 +41,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    'nuxt-mq'
   ],
 
   styleResources: {
