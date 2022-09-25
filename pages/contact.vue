@@ -28,8 +28,8 @@
   }
   .contact {
     color:$green;
-    width:100%;
-    max-width:600px;
+    width:calc(100% - 40px);
+    max-width:500px;
     margin:50px auto;
     background-color:$purple;
     padding:20px;
@@ -37,7 +37,7 @@
     position: relative;
   }
   form {
-    width:100%;
+    width:calc(100% - 30px);
     max-width:400px;
     margin:auto;
   }
