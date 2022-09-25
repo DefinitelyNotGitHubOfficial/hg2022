@@ -136,7 +136,7 @@ export default {
         border-radius:3px;
         padding:2px;
         aspect-ratio: 1/1;
-        margin-bottom:25px;
+        margin-bottom:20px;
     }
     .title {
         text-align:center;
