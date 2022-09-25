@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
 
-    <TopHat />  
+    <TopHat :reformedData="this.reformedData" />  
     <!-- <span style="color:white">
     {{this.selectedDay}}
     {{this.today}}
@@ -12,8 +12,8 @@
         <Listings :selectedData="this.sortedData" />
       </div>
       <div class="side">
-        <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay"/>
-        <Calendar :availability="this.availability" :selectedDay="this.selectedDay" />
+        <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
+        <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />
         
         <Twitter />
       </div>
@@ -124,8 +124,18 @@
   }
   .horibazontabagal {
     display: grid;
-    grid-template-columns: clamp(200px, 100%, 600px) auto;
+    grid-template-columns: clamp(300px, 100%, 600px) auto;
     gap: 25px;
+    @include mq(max, 850px){
+      grid-template-columns: 60% auto;
+    }
+    @include mq(max, 600px){
+      grid-template-columns: 100%;
+    }
   }
- 
+  .desktop {
+    @include mq(max, 600px){
+      display: none;
+    }
+  }
 </style>
