@@ -38,7 +38,6 @@ export default {
   buildModules: [
     '@nuxtjs/google-analytics'
   ],
-  
 
   
   googleAnalytics: {
