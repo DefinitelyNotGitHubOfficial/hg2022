@@ -132,7 +132,7 @@ export default {
         const template = {}
         this.tweets.data.forEach((el)=>{
             var item = Object.create(template)
-            item.text = el.text.slice(el.text.indexOf(':')+2, 1000000)
+            item.text = el.text.slice(el.text.indexOf(':')+1, 1000000)
             item.author = el.author_id
             item.like = el.public_metrics.like_count
             item.reply = el.public_metrics.reply_count
