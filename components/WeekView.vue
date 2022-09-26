@@ -190,6 +190,10 @@
 <style lang="scss" scoped>
     #weekViewParent {
         margin-bottom:15px;
+         @include mq(max, 600px){
+            width: calc(100% - 30px);
+            margin:0 auto 20px auto;
+        }
     }
     #weekView {
         background-color:$purple;

@@ -48,6 +48,10 @@
 <style lang="scss" scoped>
     #listings {
         color: $green;
+         @include mq(max, 600px){
+      width: calc(100% - 30px);
+      margin:0 auto 20px auto;
+    }
     }
     .listing {
         background-color: $purple;

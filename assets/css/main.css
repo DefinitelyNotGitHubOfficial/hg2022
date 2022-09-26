@@ -7,7 +7,7 @@ body {
     font-size:16px;
     margin:0;
     padding:0;
-    /*background-color:#2b2449;*/
+    background-color:#2b2449;
     background-image: url('/images/background.jpg');
     background-size:125px 100px;
 }

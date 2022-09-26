@@ -131,7 +131,7 @@ export default {
 
     .calendar {
         //max-width:300px;
-        width:100%;
+        width:calc(100% - 4px);
         background-color:$purple;
         color: $green;
         border-radius:3px;

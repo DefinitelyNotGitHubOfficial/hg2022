@@ -269,7 +269,11 @@ export default {
         padding-bottom:20px;
         background-color: $purple;
         color:$green;
-        max-width:500px;
+        
+        @include mq(max, 600px){
+            max-width:calc(100% - 30px);
+        }
+        margin:auto;
         width:100%;
         min-width:250px;
         border-radius: 4px;
