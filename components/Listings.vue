@@ -121,6 +121,7 @@
         display:inline-block;
         font-weight:300;
         margin-right:5px;
+        margin-bottom:7px;
         .material-symbols-outlined {
             font-size:1rem;
             padding-right:2px;

@@ -11,4 +11,23 @@ body {
     background-image: url('/images/background.jpg');
     background-size:125px 100px;
 }
+/* scroll bars */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+background: rgba(29,24,45,1) 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgba(29,24,45,1)
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #14fe72; 
+}
 

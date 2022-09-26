@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="float-header">
         <header>
             <div class="brand"><h1>Hairy Ghost</h1></div>
             <div class="search">
@@ -18,8 +18,8 @@
 
          <!-- <div><span style="color:white">{{reformedData.length}}</span></div> -->
         <div class="searchModal" v-bind:class="{ visible: visible }">
-            <div class="closesearch" @click="close()">x</div>
             <div class="searchwindow">
+                 <div class="closesearch" @click="close()">x</div>
                 <div class="totals">
                     <span class="material-symbols-outlined">equalizer</span>
                     <em>{{this.results.length}}&nbsp;</em> matches out of <em>&nbsp;{{reformedData.length}}&nbsp;</em> listings
@@ -75,15 +75,25 @@
 
 </script>
 <style lang="scss" scoped>
+
     @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
     // @import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0';
     
+    #float-header {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100vw;
+        z-index:3000;
+    }
+
     header {
         display: grid;
         z-index:2000;
         grid-template-columns: 90px auto 50px;
         gap: 10px;
         width:100%;
+        max-width:900px;
         margin: 0 auto 20px auto;
         min-width:400px;
         width:100%;
@@ -221,16 +231,18 @@
     // }
     .searchModal {
         position: fixed;
-        top:100px;
+        top:0px;
         left:0;
         height:100%;
         width:100%;
-        z-index:1000;
-        background-color:rgba(0,0,0,0.2);
+        z-index:-1;
+        background-color:rgba(0,0,0,0.7);
         display: none;
+
     }
     .searchwindow {
         width:85%;
+        max-width:800px;
         margin:15px auto 0 auto;
         color:white;
         background-color:$purple;
@@ -240,10 +252,11 @@
         height:70%;
         position: relative;
         border:1px solid $green;
+        margin-top:100px;
     }
     .closesearch {
-        left:90%;
-        top:0px;
+        left:calc(100% - 30px);
+        top:2px;
         font-weight: 400;
         cursor:pointer;
         position: absolute;

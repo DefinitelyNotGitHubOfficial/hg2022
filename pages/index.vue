@@ -126,6 +126,7 @@
     display: grid;
     grid-template-columns: clamp(300px, 100%, 600px) auto;
     gap: 25px;
+    margin-top:100px;
     @include mq(max, 850px){
       grid-template-columns: 60% auto;
     }
