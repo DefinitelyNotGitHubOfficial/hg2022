@@ -201,7 +201,7 @@
         display:inline-block;
         width: 100%;
         display: grid;
-        grid-template-columns: 30px auto 30px;
+        grid-template-columns: 40px auto 40px;
         height:55px;
     }
     #left {
