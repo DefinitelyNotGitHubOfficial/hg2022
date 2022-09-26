@@ -15,6 +15,7 @@
         <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
         <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />
         <HauntedDuluth />
+        <!-- <Stickers /> -->
         <Twitter />
       </div>
     </div>

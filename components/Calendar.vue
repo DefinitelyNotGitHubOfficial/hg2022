@@ -169,7 +169,7 @@ export default {
         // height:20px;
         // width:20px;
         color: $g-light;
-        background-color:$black;
+        background-color:rgba(0,0,0,0.3);
         aspect-ratio: 1/1;
         align-items: center;
         justify-content: center;

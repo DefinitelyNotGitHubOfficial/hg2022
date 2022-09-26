@@ -12,7 +12,7 @@
 <style lang="scss" scoped>
     #everything {
         background-image: url("/../../images/hauntedduluth.jpg");
-        margin-bottom:30px;
+        margin-bottom:20px;
         background-color: $black;
         min-height:180px;
         width:calc(100% - 30px);
