@@ -98,8 +98,8 @@
         min-width:400px;
         width:100%;
         background-color:$purple;
-        border-bottom-left-radius: $sm-rad;
-        border-bottom-right-radius: $sm-rad;
+        //border-bottom-left-radius: $sm-rad;
+        //border-bottom-right-radius: $sm-rad;
         border-bottom:1px dotted $green;
         div {
             //border:1px solid red;
