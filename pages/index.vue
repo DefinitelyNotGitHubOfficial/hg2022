@@ -12,8 +12,9 @@
         <Listings :selectedData="this.sortedData" />
       </div>
       <div class="side">
-        <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
         <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />
+        <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
+        
         <HauntedDuluth />
         <GrimCities />
         <Twitter />

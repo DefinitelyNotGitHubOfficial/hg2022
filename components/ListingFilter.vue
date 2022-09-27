@@ -124,7 +124,7 @@
     }
 }
 form {
-    padding:15px;
+    padding:10px 15px;
     line-height: 1.5rem;
     input {
         height:50px;
@@ -144,13 +144,16 @@ form {
   display: block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   cursor: pointer;
   font-size: 1 rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  &:last-child {
+      margin-bottom:0px;
+  }
 }
 
 /* Hide the browser's default checkbox */
