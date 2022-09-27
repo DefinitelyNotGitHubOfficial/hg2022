@@ -41,7 +41,7 @@
         }
     }
     .copy {
-        background-color:rgba(0,0,0,0.5);
+        background-color:rgba(0,0,0,0.6);
         padding:5px;
         border-radius: 4px;
     }
