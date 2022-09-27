@@ -16,6 +16,7 @@
         background-color: $black;
         min-height:180px;
         width:calc(100% - 30px);
+        font-weight:300;
         @include mq(max, 600px){
             max-width:calc(100% - 60px);
             margin:0 auto 25px auto;
@@ -44,5 +45,7 @@
         background-color:rgba(0,0,0,0.6);
         padding:5px;
         border-radius: 4px;
+        font-weight: 300;
+        font-size:.9rem;
     }
 </style>
