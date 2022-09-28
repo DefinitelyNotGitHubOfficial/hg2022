@@ -5,20 +5,20 @@
     <h1>Contact</h1>
     <p>Hello!</p> <p>Please let me know if I'm missing something, I'm here to help and I appreciate your help.</p>
     
-<form action="https://app.headlessforms.cloud/api/v1/form-submission/J2Q9QMev9W" method="POST">
-     <input type="text" name="name"  placeholder="Name"><br />
-     <input type="email" name="email" placeholder="Email"><br />
-     
-     <textarea type="text" name="message" required placeholder="Message"></textarea><br />
-     <input type="text" name="website"  placeholder="Website"><br />
-    <button type="submit">submit</button>
-</form>
+    <form action="https://app.headlessforms.cloud/api/v1/form-submission/J2Q9QMev9W" method="POST">
+        <input type="text" name="name"  placeholder="Name"><br />
+        <input type="email" name="email" placeholder="Email"><br />
+        
+        <textarea type="text" name="message" required placeholder="Message"></textarea><br />
+        <input type="text" name="website"  placeholder="Website"><br />
+        <button type="submit">submit</button>
+    </form>
   </div>
 </template>
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
   h1 {
-    font-family: 'Creepster', cursive;
+    font-family: 'Creepster', cursive; 
     margin:0;
     padding:0;
     font-size:2rem;
