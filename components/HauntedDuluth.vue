@@ -38,7 +38,7 @@
             text-decoration: none;
             text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
             span {
-                font-weight:400;
+                font-weight:400; 
             }
         }
     }
