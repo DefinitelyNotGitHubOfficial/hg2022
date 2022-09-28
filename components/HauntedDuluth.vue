@@ -45,7 +45,7 @@
     .copy {
         background-color:rgba(0,0,0,0.6);
         padding:5px;
-        border-radius: 4px;
+        border-radius: 4px; 
         font-weight: 300;
         font-size:.9rem;
     }
