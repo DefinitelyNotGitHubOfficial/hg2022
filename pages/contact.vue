@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
   h1 {
-    font-family: 'Creepster', cursive; 
+    font-family: 'Creepster', cursive;
     margin:0;
     padding:0;
     font-size:2rem;
