@@ -18,6 +18,7 @@
         <HauntedDuluth />
         <GrimCities />
         <Twitter />
+        <div id="top" @click="scrollTop()"><span class="material-symbols-outlined">arrow_upward</span>Scroll to top</div>
       </div>
     </div>
     
@@ -43,6 +44,17 @@
       this.listingData = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1WYlDRdtdIXw4Td7wPqKIEajothVgaRakk58ircwPm7U/values/Sheet1?alt=json&key=AIzaSyBg1PKXrS96HD7eevWzVIvYw70TDdO9LLc").then(res => res.json())
     },
     mounted(){
+      //scroll event
+      window.addEventListener("scroll", ()=>{
+        if(window.pageYOffset > 1300){
+          document.getElementById('top').classList.add("enable")
+        }
+        else {
+          document.getElementById('top').classList.remove("enable")
+        }
+      });
+
+
       //rebuild data to object
       this.listingData.values.forEach((el) => {
         //remove first listing for imformation management 
@@ -102,6 +114,10 @@
       select(e) { 
         this.selectedDay = e
       },
+      scrollTop(){
+        //window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     },
     watch: { 
         selectedDay: function(newVal, oldVal) { // watch it
@@ -140,5 +156,28 @@
     @include mq(max, 600px){
       display: none;
     }
+  }
+  #top {
+    background-color: $green;
+    color: $purple;
+    position: fixed;
+    bottom:0px;
+    margin-bottom:-40px;
+    left:0px;
+    width:100%;
+    transition:margin 2s;
+    cursor:pointer;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    padding:5px 0;
+    .material-symbols-outlined {
+      font-size: 1rem;
+      padding-right:3px;
+    }
+  }
+  .enable {
+    display:flex!important;
+    margin-bottom:0px!important;
   }
 </style>
