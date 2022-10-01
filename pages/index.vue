@@ -12,7 +12,7 @@
         <Listings :selectedData="this.sortedData" />
       </div>
       <div class="side">
-        <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />
+        <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />  
         <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
         
         <HauntedDuluth />
@@ -92,8 +92,8 @@
       this.$nuxt.$on('sortedData', ($event) => this.filter($event))
       this.$nuxt.$on('selectedDay', ($event) => this.select($event))
       const date = new Date();
-      this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${date.getDate()}`
-      this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${date.getDate()}`
+      this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
     },
     methods: {
       filter(e) {
