@@ -46,7 +46,7 @@
     mounted(){
       //scroll event
       window.addEventListener("scroll", ()=>{
-        if(window.pageYOffset > 1300){
+        if(window.pageYOffset > 1000){
           document.getElementById('top').classList.add("enable")
         }
         else {
