@@ -162,12 +162,12 @@
     color: $purple;
     position: fixed;
     bottom:0px;
-    margin-bottom:-40px;
+    margin-bottom:-50px;
     left:0px;
     width:100%;
-    transition:margin 2s;
+    transition:all .5s;
     cursor:pointer;
-    display:none;
+    display:flex;
     align-items: center;
     justify-content: center;
     padding:5px 0;
@@ -177,7 +177,6 @@
     }
   }
   .enable {
-    display:flex!important;
     margin-bottom:0px!important;
   }
 </style>
