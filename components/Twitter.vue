@@ -274,6 +274,7 @@ export default {
             max-width:calc(100% - 30px);
         }
         margin:auto;
+        margin-bottom:20px;
         width:100%;
         min-width:250px;
         border-radius: 4px;

@@ -13,11 +13,12 @@
       </div>
       <div class="side">
         <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />  
-        <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
+        <ListingFilter :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
         
         <HauntedDuluth />
         <GrimCities />
         <Twitter />
+        <Graveyard />
         <div id="top" @click="scrollTop()"><span class="material-symbols-outlined">arrow_upward</span>Scroll to top</div>
       </div>
     </div>
