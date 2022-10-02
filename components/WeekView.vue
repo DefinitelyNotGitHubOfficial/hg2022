@@ -1,5 +1,5 @@
 <template>
-    <div id="weekViewParent">
+    <div id="weekViewParent"> 
         <div id="weekView">
             <div id="left" @click="left()"><span class="material-symbols-outlined">arrow_forward_ios</span></div>
             <div id="window">
