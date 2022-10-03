@@ -44,6 +44,12 @@
       this.listingData = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1WYlDRdtdIXw4Td7wPqKIEajothVgaRakk58ircwPm7U/values/Sheet1?alt=json&key=AIzaSyBg1PKXrS96HD7eevWzVIvYw70TDdO9LLc").then(res => res.json())
     },
     mounted(){
+      //date
+      const date = new Date();
+      this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+
+
       //scroll event
       window.addEventListener("scroll", ()=>{
         if(window.pageYOffset > 1000){
@@ -103,9 +109,7 @@
     created() {
       this.$nuxt.$on('sortedData', ($event) => this.filter($event))
       this.$nuxt.$on('selectedDay', ($event) => this.select($event))
-      const date = new Date();
-      this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
-      this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      
     },
     methods: {
       filter(e) {
