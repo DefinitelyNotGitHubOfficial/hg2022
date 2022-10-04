@@ -39,6 +39,7 @@
             document.addEventListener("keyup", (e) => {
                 
                 if(document.getElementById('search').value.length > 2){
+                    
                     this.visible = true
                     this.results = []
                     this.reformedData.forEach((el) => {
@@ -49,6 +50,8 @@
                 } else {
                  this.visible = false
                 }
+
+                
             });
         },
         props:{

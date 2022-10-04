@@ -3,7 +3,7 @@
         <div v-if="selectedData.length > 0">
             <div class="listing" v-for="item in selectedData">
                 <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
-                    <div class="type" v-if="item.type == 'Attraction'"><div><span class="material-symbols-outlined">attractions</span>{{item.type[0]}}</div></div>
+                    <div class="type" v-if="item.type == 'Attraction'"><div><a href="/attractions"><span class="material-symbols-outlined">attractions</span>{{item.type[0]}}</a></div></div>
                     <div class="type" v-if="item.type == 'Event'"><div><span class="material-symbols-outlined">festival</span>{{item.type[0]}}</div></div>
                     <div class="type" v-if="item.type == 'Movie'"><div><span class="material-symbols-outlined mov">movie</span>{{item.type[0]}}</div></div>
                 </div>
@@ -69,6 +69,7 @@
         font-size: 1.8rem;
         padding:10px 15px;
         font-weight: 300;
+       
     }
     .type {
         background-color: $green;
@@ -88,6 +89,10 @@
         }
         div {
             display:flex;
+        }
+         a {
+            text-decoration: none;
+            color:$purple;
         }
     }
     .dates {
