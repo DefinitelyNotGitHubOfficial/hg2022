@@ -94,7 +94,7 @@
           this.currentData.push(el)
         }
       })
-      //get all days with stuff for calendar
+      //get all days with stuff for calendar 
       //this.availability = [...new Set(this.availability.EventDates)];
       var alldatesCombined = []
      
