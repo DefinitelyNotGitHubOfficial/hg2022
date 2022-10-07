@@ -162,7 +162,7 @@
     }
   }
   #top {
-    background-color: $green;
+    background-color: $green; 
     color: $purple;
     position: fixed;
     bottom:0px;
