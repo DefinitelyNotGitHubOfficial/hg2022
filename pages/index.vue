@@ -176,7 +176,7 @@
     justify-content: center;
     padding:5px 0;
     .material-symbols-outlined {
-      font-size: 1rem;
+      font-size: 1rem; 
       padding-right:3px;
     }
   }
