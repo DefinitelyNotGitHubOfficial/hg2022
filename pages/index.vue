@@ -105,6 +105,10 @@
       })
       this.availability =  [...new Set(this.availability)]
 
+      /////////////////
+      /////////////////
+      //console.log(this.sortedData)
+      //this.sortedData = this.sortedData.sort((a, b) => { return Math.floor(Math.random() * 3) } )
     },
     created() {
       this.$nuxt.$on('sortedData', ($event) => this.filter($event))
@@ -134,6 +138,8 @@
               this.sortedData.push(el)
             }
           })
+          //randomizes data
+          this.sortedData = this.sortedData.sort((a, b) => { return Math.floor(Math.random() * 3) } )
         }
     }
   }
