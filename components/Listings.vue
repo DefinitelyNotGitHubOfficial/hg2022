@@ -12,7 +12,7 @@
                     <span class="material-symbols-outlined">calendar_today</span>{{item.displayDates}}  &nbsp;•&nbsp; 
                     {{item.times}}
                 </div>
-                <div class="desc">{{item.desc}}</div>
+                <div class="desc" @click="expand($event)">{{item.desc}}</div>
                 <div class="link">
                     <span class="material-symbols-outlined mov">link</span>
                     <a :href="item.url" target="_blank">{{item.website}}</a>
@@ -41,6 +41,16 @@
                 type: Array,
                 required: true,
                 default: () => {}
+            }
+        },
+        methods: {
+            expand(event){
+                if(Array.from(event.target.classList).some(x=>x == "expandme")){
+                    event.target.classList.remove("expandme")
+                }
+                else{
+                    event.target.classList.add("expandme")
+                }
             }
         }
     }
@@ -112,7 +122,18 @@
     .desc {
         font-size:1.1rem;
         line-height:1.5rem;
-        padding:0px 15px 15px 15px;
+        // padding:0px 15px 15px 15px;
+        padding:0px 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all .5s;
+        cursor:pointer;
+    }
+    .expandme {
+        -webkit-line-clamp: 100;
     }
     .meta {
         padding:0px 15px 15px 15px;
@@ -138,7 +159,7 @@
         }
     }
     .link {
-        padding:0px 15px 15px 15px;
+        padding:15px 15px 15px 15px;
         display:flex;
         a {
             color: $green;
