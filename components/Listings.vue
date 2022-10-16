@@ -40,7 +40,7 @@
             selectedData:{
                 type: Array,
                 required: true,
-                default: () => {}
+                default: () => {} 
             }
         },
         methods: {
