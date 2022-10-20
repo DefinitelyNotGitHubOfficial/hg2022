@@ -89,7 +89,7 @@ export default {
     }, "300")
   },
   methods: {
-      selectDay(day, event){
+      selectDay(day, event){ 
           if(Array.from(event.target.classList).filter(x=>x == "avail").length > 0){
               var allCurrent = document.querySelectorAll('.current')
               allCurrent.forEach((el) => {
