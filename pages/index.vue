@@ -16,7 +16,7 @@
         <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
         
         <!-- <HauntedDuluth /> -->
-        <GrimCities /> 
+        <GrimCities />  
         <Twitter />
         <div id="top" @click="scrollTop()"><span class="material-symbols-outlined">arrow_upward</span>Scroll to top</div>
       </div>
