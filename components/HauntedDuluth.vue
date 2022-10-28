@@ -2,7 +2,7 @@
     <div id="everything">
         <div class="copy">
           
-        <a href="http://hauntedduluth.com/" target="_blank">
+        <a href="http://hauntedduluth.com/" target="_blank"> 
                 To our friends in Duluth, check out <br /><span>www.hauntedduluth.com</span>
             
         </a>
