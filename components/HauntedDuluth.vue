@@ -10,7 +10,7 @@
     </div>
 </template>
 <style lang="scss" scoped>
-    #everything {
+    #everything { 
         background-image: url("/../../images/hauntedduluth.jpg");
         margin-bottom:20px;
         background-position: 0px -20px;
