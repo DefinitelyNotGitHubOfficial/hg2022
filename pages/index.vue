@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
-
-    <TopHat :reformedData="this.reformedData" />  
-    <!-- <span style="color:white">
-    {{this.selectedDay}}
-    {{this.today}}
-    </span> -->
+    <div class="temp">
+      <h1>Halloween Hangover?</h1>
+      Yeah, we're feeling it too...  but don't worry, Holloween will return next year, and with it, Hairy Ghost!
+    </div>
+   
+    <!-- <TopHat :reformedData="this.reformedData" />  
     <div class="horibazontabagal">
       <div class="main">
         <WeekView :selectedDay="this.selectedDay" />
@@ -15,12 +15,12 @@
         <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />  
         <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
         
-        <!-- <HauntedDuluth /> -->
+        <HauntedDuluth />
         <GrimCities />  
         <Twitter />
         <div id="top" @click="scrollTop()"><span class="material-symbols-outlined">arrow_upward</span>Scroll to top</div>
       </div>
-    </div>
+    </div> -->
     
     
   </div>
@@ -188,5 +188,14 @@
   }
   .enable {
     margin-bottom:0px!important;
+  }
+  .temp {
+    width:400px;
+    margin:auto;
+    padding:40px 0 0 0;
+    color:white;
+    h1 {
+      text-align: center;
+    }
   }
 </style>
