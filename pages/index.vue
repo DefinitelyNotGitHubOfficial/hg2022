@@ -1,9 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="temp">
-      <h1>Halloween Hangover?</h1>
-      Yeah, we're feeling it too...  but don't worry, Holloween will return next year, and with it, Hairy Ghost!
-    </div>
+    <Countdown />
    
     <!-- <TopHat :reformedData="this.reformedData" />  
     <div class="horibazontabagal">
