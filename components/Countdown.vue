@@ -66,6 +66,7 @@
         color: #fff;
         max-width:500px;
         margin: auto;
+        padding: 20px;
     }
     #cake {
         display: inline-block;
