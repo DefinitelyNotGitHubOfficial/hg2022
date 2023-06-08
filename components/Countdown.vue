@@ -1,10 +1,12 @@
 <template>
     <div  class="lazy-parent">
-        <p>Hairy ghost is your guide to the Twin Cities Halloween scene.</p>
-      <h1>Hairy Ghost is resting for now. <br /> He'll be back this fall.</h1>
-      <!-- Yeah, we're feeling it too...  but don't worry, Holloween will return next year, and with it, Hairy Ghost!<br /> -->
-    <h2><span id="cake"></span> until Halloween.</h2>
-    
+        <div class="graphic"><img src="images/grave.svg" /></div>
+        <div>
+            <p>Hairy ghost is your guide to the Twin Cities Halloween scene.</p>
+            <h1>Hairy Ghost is resting for now. <br /> He'll be back this fall.</h1>
+            <!-- Yeah, we're feeling it too...  but don't worry, Holloween will return next year, and with it, Hairy Ghost!<br /> -->
+            <h2><span id="cake"></span> until Halloween.</h2>
+        </div>
 
     
     </div>
@@ -64,11 +66,22 @@
 <style lang="scss" scoped>
     .lazy-parent {
         color: #fff;
-        max-width:500px;
+        max-width:800px;
         margin: auto;
         padding: 20px;
+        display: flex;
+        @media screen and (max-width: 800px){
+            flex-direction: column-reverse;
+        }
     }
     #cake {
         display: inline-block;
+    }
+    .graphic {
+        height: 100px;
+        img {
+            min-height: 400px;
+            max-height: 550px;
+        }
     }
 </style>
