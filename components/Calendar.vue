@@ -9,49 +9,55 @@
             <div class="dayOfTheWeek">Thu</div>
             <div class="dayOfTheWeek">Fri</div>
             <div class="dayOfTheWeek">Sat</div>
-            <div class="day september" data="2022-09-25" @click="selectDay('2022-09-25', $event)">25</div>
-            <div class="day september" data="2022-09-26" @click="selectDay('2022-09-26', $event)">26</div>
-            <div class="day september" data="2022-09-27" @click="selectDay('2022-09-27', $event)">27</div>
-            <div class="day september" data="2022-09-28" @click="selectDay('2022-09-28', $event)">28</div>
-            <div class="day september" data="2022-09-29" @click="selectDay('2022-09-29', $event)">29</div>
-            <div class="day september" data="2022-09-30" @click="selectDay('2022-09-30', $event)">30</div>
-            <div class="day october" data="2022-10-01" @click="selectDay('2022-10-01', $event)">1</div>
-            <div class="day october" data="2022-10-02" @click="selectDay('2022-10-02', $event)">2</div>
-            <div class="day october" data="2022-10-03" @click="selectDay('2022-10-03', $event)">3</div>
-            <div class="day october" data="2022-10-04" @click="selectDay('2022-10-04', $event)">4</div>
-            <div class="day october" data="2022-10-05" @click="selectDay('2022-10-05', $event)">5</div>
-            <div class="day october" data="2022-10-06" @click="selectDay('2022-10-06', $event)">6</div>
-            <div class="day october" data="2022-10-07" @click="selectDay('2022-10-07', $event)">7</div>
-            <div class="day october" data="2022-10-08" @click="selectDay('2022-10-08', $event)">8</div>
-            <div class="day october" data="2022-10-09" @click="selectDay('2022-10-09', $event)">9</div>
-            <div class="day october" data="2022-10-10" @click="selectDay('2022-10-10', $event)">10</div>
-            <div class="day october" data="2022-10-11" @click="selectDay('2022-10-11', $event)">11</div>
-            <div class="day october" data="2022-10-12" @click="selectDay('2022-10-12', $event)">12</div>
-            <div class="day october" data="2022-10-13" @click="selectDay('2022-10-13', $event)">13</div>
-            <div class="day october" data="2022-10-14" @click="selectDay('2022-10-14', $event)">14</div>
-            <div class="day october" data="2022-10-15" @click="selectDay('2022-10-15', $event)">15</div>
-            <div class="day october" data="2022-10-16" @click="selectDay('2022-10-16', $event)">16</div>
-            <div class="day october" data="2022-10-17" @click="selectDay('2022-10-17', $event)">17</div>
-            <div class="day october" data="2022-10-18" @click="selectDay('2022-10-18', $event)">18</div>
-            <div class="day october" data="2022-10-19" @click="selectDay('2022-10-19', $event)">19</div>
-            <div class="day october" data="2022-10-20" @click="selectDay('2022-10-20', $event)">20</div>
-            <div class="day october" data="2022-10-21" @click="selectDay('2022-10-21', $event)">21</div>
-            <div class="day october" data="2022-10-22" @click="selectDay('2022-10-22', $event)">22</div>
-            <div class="day october" data="2022-10-23" @click="selectDay('2022-10-23', $event)">23</div>
-            <div class="day october" data="2022-10-24" @click="selectDay('2022-10-24', $event)">24</div>
-            <div class="day october" data="2022-10-25" @click="selectDay('2022-10-25', $event)">25</div>
-            <div class="day october" data="2022-10-26" @click="selectDay('2022-10-26', $event)">26</div>
-            <div class="day october" data="2022-10-27" @click="selectDay('2022-10-27', $event)">27</div>
-            <div class="day october" data="2022-10-28" @click="selectDay('2022-10-28', $event)">28</div>
-            <div class="day october" data="2022-10-29" @click="selectDay('2022-10-29', $event)">29</div>
-            <div class="day october" data="2022-10-30" @click="selectDay('2022-10-30', $event)">30</div>
-            <div class="day october" data="2022-10-31" @click="selectDay('2022-10-31', $event)">🎃</div>
-            <div class="day november" data="2022-11-01" @click="selectDay('2022-11-01', $event)">1</div>
-            <div class="day november" data="2022-11-02" @click="selectDay('2022-11-02', $event)">2</div>
-            <div class="day november" data="2022-11-03" @click="selectDay('2022-11-03', $event)">3</div>
-            <div class="day november" data="2022-11-04" @click="selectDay('2022-11-04', $event)">4</div>
-            <div class="day november" data="2022-11-05" @click="selectDay('2022-11-05', $event)">5</div>
+            <div class="day september" data="2023-09-24" @click="selectDay('2023-09-24', $event)">24</div>
+            <div class="day september" data="2023-09-25" @click="selectDay('2023-09-25', $event)">25</div>
+            <div class="day september" data="2023-09-26" @click="selectDay('2023-09-26', $event)">26</div>
+            <div class="day september" data="2023-09-27" @click="selectDay('2023-09-27', $event)">27</div>
+            <div class="day september" data="2023-09-28" @click="selectDay('2023-09-28', $event)">28</div>
+            <div class="day september" data="2023-09-29" @click="selectDay('2023-09-29', $event)">29</div>
+            <div class="day september" data="2023-09-30" @click="selectDay('2023-09-30', $event)">30</div>
+            
+            <div class="day october" data="2023-10-01" @click="selectDay('2023-10-01', $event)">1</div>
+            <div class="day october" data="2023-10-02" @click="selectDay('2023-10-02', $event)">2</div>
+            <div class="day october" data="2023-10-03" @click="selectDay('2023-10-03', $event)">3</div>
+            <div class="day october" data="2023-10-04" @click="selectDay('2023-10-04', $event)">4</div>
+            <div class="day october" data="2023-10-05" @click="selectDay('2023-10-05', $event)">5</div>
+            <div class="day october" data="2023-10-06" @click="selectDay('2023-10-06', $event)">6</div>
+            <div class="day october" data="2023-10-07" @click="selectDay('2023-10-07', $event)">7</div>
+            
+            <div class="day october" data="2023-10-08" @click="selectDay('2023-10-08', $event)">8</div>
+            <div class="day october" data="2023-10-09" @click="selectDay('2023-10-09', $event)">9</div>
+            <div class="day october" data="2023-10-10" @click="selectDay('2023-10-10', $event)">10</div>
+            <div class="day october" data="2023-10-11" @click="selectDay('2023-10-11', $event)">11</div>
+            <div class="day october" data="2023-10-12" @click="selectDay('2023-10-12', $event)">12</div>
+            <div class="day october" data="2023-10-13" @click="selectDay('2023-10-13', $event)">13</div>
+            <div class="day october" data="2023-10-14" @click="selectDay('2023-10-14', $event)">14</div>
+            
+            <div class="day october" data="2023-10-15" @click="selectDay('2023-10-15', $event)">15</div>
+            <div class="day october" data="2023-10-16" @click="selectDay('2023-10-16', $event)">16</div>
+            <div class="day october" data="2023-10-17" @click="selectDay('2023-10-17', $event)">17</div>
+            <div class="day october" data="2023-10-18" @click="selectDay('2023-10-18', $event)">18</div>
+            <div class="day october" data="2023-10-19" @click="selectDay('2023-10-19', $event)">19</div>
+            <div class="day october" data="2023-10-20" @click="selectDay('2023-10-20', $event)">20</div>
+            <div class="day october" data="2023-10-21" @click="selectDay('2023-10-21', $event)">21</div>
+
+            <div class="day october" data="2023-10-22" @click="selectDay('2023-10-22', $event)">22</div>
+            <div class="day october" data="2023-10-23" @click="selectDay('2023-10-23', $event)">23</div>
+            <div class="day october" data="2023-10-24" @click="selectDay('2023-10-24', $event)">24</div>
+            <div class="day october" data="2023-10-25" @click="selectDay('2023-10-25', $event)">25</div>
+            <div class="day october" data="2023-10-26" @click="selectDay('2023-10-26', $event)">26</div>
+            <div class="day october" data="2023-10-27" @click="selectDay('2023-10-27', $event)">27</div>
+            <div class="day october" data="2023-10-28" @click="selectDay('2023-10-28', $event)">28</div>
+
+            <div class="day october" data="2023-10-29" @click="selectDay('2023-10-29', $event)">29</div>
+            <div class="day october" data="2023-10-30" @click="selectDay('2023-10-30', $event)">30</div>
+            <div class="day october" data="2023-10-31" @click="selectDay('2023-10-31', $event)">🎃</div>
+            <div class="day november" data="2023-11-01" @click="selectDay('2023-11-01', $event)">1</div>
+            <div class="day november" data="2023-11-02" @click="selectDay('2023-11-02', $event)">2</div>
+            <div class="day november" data="2023-11-03" @click="selectDay('2023-11-03', $event)">3</div>
+            <div class="day november" data="2023-11-04" @click="selectDay('2023-11-04', $event)">4</div>
         </div>
+        <Countdown />
     </div>
 </template>
 <script>

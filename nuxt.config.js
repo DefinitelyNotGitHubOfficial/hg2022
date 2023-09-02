@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Hairy Ghost - Twin Cities Guide to Halloween',
+    title: 'Hairy Ghost - Twin Cities Official Guide to Halloween',
     htmlAttrs: {
       lang: 'en'
     },
@@ -11,7 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
       { property: 'og:description', content: 'Welcome to Hairy Ghost! Your guide to Halloween, Haunted Houses, Movies and Attractions in the Twin Cities.' },
-      { property: 'og:title', content: 'Hairy Ghost - Twin Cities Guide to Halloween, Haunted House, Movies and Attractions' },
+      { property: 'og:title', content: 'Hairy Ghost - Twin Cities Official Guide to Halloween' },
       { property: 'og:url', content: 'https://www.hairyghost.com' },
       { property: 'og:locale', content: 'en_US' },
       { property: 'og:image', content: 'https://www.hairyghost.com/images/hg-sticker.png'  }
@@ -65,7 +65,7 @@ export default {
   },
   axios: {
     // Do away with the baseUrl when using proxy
-    baseURL: 'https://demo.jaredfuller.com/',
+    //baseURL: 'https://demo.jaredfuller.com/',
     proxyHeaders: false,
     credentials: false
    },

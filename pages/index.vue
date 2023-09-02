@@ -1,8 +1,14 @@
 <template>
   <div class="wrapper">
-    <Countdown />
+    <!-- <Countdown /> -->
    
-    <!-- <TopHat :reformedData="this.reformedData" />  
+    <TopHat :reformedData="this.reformedData" />  
+    
+    <div class="updatemessage">
+      <img src="images/ghosty.svg" />
+      Hey Spooky Enthusiasts! Welcome to Hairy Ghost - the official Twin Cities guide to Halloween.<br />
+      Our Halloween list of events, movies, and attractions may seem a bit on the slender side right now, but don't let that ghostly appearance fool you! We're working tirelessly behind the scenes, updating it regularly. As the shadows grow longer and we inch closer to October, you can expect to see the list swell with more ghoulish delights. <br />Stay tuned, and thank you for your eerie patience! 
+    </div>
     <div class="horibazontabagal">
       <div class="main">
         <WeekView :selectedDay="this.selectedDay" />
@@ -11,13 +17,18 @@
       <div class="side">
         <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />  
         <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
-        
-        <HauntedDuluth />
+        <div class="c23">
+          <a href="https://www.crypticonminneapolis.com" target="_blank">
+            <img src="images/crypticon23.jpg" />
+          </a>
+        </div>
+        <Graveyard />
+        <!-- <HauntedDuluth /> -->
         <GrimCities />  
-        <Twitter />
+        <!-- <Twitter /> -->
         <div id="top" @click="scrollTop()"><span class="material-symbols-outlined">arrow_upward</span>Scroll to top</div>
       </div>
-    </div> -->
+    </div>
     
     
   </div>
@@ -34,7 +45,8 @@
         selectedDay:'',
         today: '',
         currentData:[],
-        availability:[]
+        availability:[],
+        tags:[]
       }
     },
     async fetch() {
@@ -42,10 +54,15 @@
     },
     mounted(){
       //date
-      const date = new Date();
-      this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
-      this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      let date = new Date();
 
+
+      // this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      this.today = "2022-09-26" 
+      // this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      this.selectedDay = "2022-09-26"
+      console.log(this.today)
+      console.log(this.selectedDay)
 
       //scroll event
       window.addEventListener("scroll", ()=>{
@@ -77,6 +94,7 @@
               image: el[10],
               website: el[11],
               url: el[12],
+              tags: el[13]
             }
           )
         }
@@ -106,6 +124,7 @@
       /////////////////
       //console.log(this.sortedData)
       //this.sortedData = this.sortedData.sort((a, b) => { return Math.floor(Math.random() * 3) } )
+      console.log(this.sortedData)
     },
     created() {
       this.$nuxt.$on('sortedData', ($event) => this.filter($event))
@@ -151,7 +170,7 @@
     display: grid;
     grid-template-columns: clamp(300px, 100%, 600px) auto;
     gap: 25px;
-    margin-top:100px;
+    // margin-top:100px;
     @include mq(max, 850px){
       grid-template-columns: 60% auto;
     }
@@ -195,4 +214,44 @@
       text-align: center;
     }
   }
+  .c23 {
+    margin-bottom: 15px;
+    img {
+      width: 100%;
+    }
+    @include mq(max, 600px){
+        width: calc(100% - 30px);
+        margin-left: 15px;
+   }
+  }
+  .updatemessage {
+    margin: 95px 0 15px 0;
+    color: $green;
+    font-weight: 400;
+    line-height: 1.6rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    font-size: 1.1rem;
+    background-color: $purple;
+    padding: 15px;
+    border-radius: 3px;
+    img {
+      height: 100px;
+      float: left;
+      padding-right: 15px;
+      padding-bottom: 30px;
+      padding-top: 15px;
+      animation: flaoton 4s infinite;
+    }
+  }
+  @keyframes flaoton {
+            0% {
+                padding-top: 0px;
+            }
+            50% {
+                padding-top: 15px;
+            }
+            100% {
+                padding-top: 0px;
+            }
+        }
 </style>

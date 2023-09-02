@@ -1,7 +1,7 @@
 <template>
     <div id="float-header">
         <header>
-            <div class="brand"><h1>Hairy Ghost</h1></div>
+            <div class="brand"><a href="/"><h1>Hairy Ghost</h1></a></div>
             <div class="search">
                 <form>
                     <span class="material-symbols-outlined">search</span>
@@ -9,9 +9,11 @@
                 </form>
             </div>
             <div class="contact">
-                <nuxt-link to="/contact">
+                <!-- <nuxt-link to="/contact">
                     <span class="material-symbols-outlined">forum</span>
-                </nuxt-link>
+                </nuxt-link> -->
+                <!-- <Countdown /> -->
+                <Contact />
             </div>
         </header>
 
@@ -19,12 +21,18 @@
          <!-- <div><span style="color:white">{{reformedData.length}}</span></div> -->
         <div class="searchModal" v-bind:class="{ visible: visible }">
             <div class="searchwindow">
-                 <div class="closesearch" @click="close()">x</div>
-                <div class="totals">
+                <div class="searchwindowTop">
+                    <div class="closesearch" @click="close()">  
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                    <div class="totals">
                     <span class="material-symbols-outlined">equalizer</span>
                     <em>{{this.results.length}}&nbsp;</em> matches out of <em>&nbsp;{{reformedData.length}}&nbsp;</em> listings
                     </div>
+                </div>
+                 
                 
+                <br /><br />
                 <Listings :selectedData="this.results" />
             </div>
         </div>
@@ -257,19 +265,20 @@
     }
     .closesearch {
         left:calc(100% - 30px);
-        top:2px;
+        top:10px;
         font-weight: 400;
         cursor:pointer;
         position: absolute;
         z-index:1001;
-        color: $purple;
-        background-color: $green;
-        padding:10px 7px 14px 7px;
+        //color: $purple;
+        color: $green;
+        //background-color: $green;
+        //padding:10px 7px 14px 7px;
         font-size:1.4rem;
         border-radius:50%;
         line-height:0;  
-        border:2px solid $white;
-        box-shadow:2px 2px 2px 2px rgba(0,0,0,0.2);
+        //border:2px solid $white;
+        //box-shadow:2px 2px 2px 2px rgba(0,0,0,0.2);
     }
     .visible {
         display:block;
@@ -288,5 +297,15 @@
             padding-right:3px;
             margin-top:1px;
         }
+    }
+    .searchwindowTop {
+        position: fixed;
+        background-color: rgb(29, 24, 45);
+        // background-color:gray;
+        width:calc(85% - 10px);
+        max-width:790px;
+        padding: 15px 15px 0px 15px;
+        margin-top:-15px;
+        margin-left: -10px;
     }
 </style>

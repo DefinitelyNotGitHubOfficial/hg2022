@@ -1,12 +1,8 @@
 <template>
     <div  class="lazy-parent">
-        <div class="graphic"><img src="images/grave.svg" /></div>
-        <div>
-            <p>Hairy ghost is your guide to the Twin Cities Halloween scene.</p>
-            <h1>Hairy Ghost is resting for now. <br /> He'll be back this fall.</h1>
-            <!-- Yeah, we're feeling it too...  but don't worry, Holloween will return next year, and with it, Hairy Ghost!<br /> -->
-            <h2><span id="cake"></span> until Halloween.</h2>
-        </div>
+
+            <span id="cake"></span>
+   
 
     
     </div>
@@ -14,7 +10,7 @@
 <script>
   export default {
     mounted(){
-        var countDownDate = new Date("Oct 10, 2023 0:0:0").getTime()
+        var countDownDate = new Date("Oct 31, 2023 0:0:0").getTime()
 
 
 
@@ -34,8 +30,7 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
         // Output the result in an element with id="demo"
-        document.getElementById("cake").innerHTML = days + " days " + hours + " hours "
-        + minutes + " minutes ";
+        document.getElementById("cake").innerHTML = (days+1) + " days until Halloween";
         var x = setInterval(function() {
 
         // Get today's date and time
@@ -51,8 +46,8 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
         // Output the result in an element with id="demo"
-        document.getElementById("cake").innerHTML = days + " days " + hours + " hours "
-        + minutes + " minutes ";
+        // document.getElementById("cake").innerHTML = days + " days " + hours + " hours " + minutes + " minutes ";
+        document.getElementById("cake").innerHTML = (days+1) + " days until Halloween";
             
         // If the count down is over, write some text 
         if (distance < 0) {
@@ -64,24 +59,16 @@
   }
 </script>
 <style lang="scss" scoped>
-    .lazy-parent {
-        color: #fff;
-        max-width:800px;
-        margin: auto;
-        padding: 20px;
-        display: flex;
-        @media screen and (max-width: 800px){
-            flex-direction: column-reverse;
-        }
-    }
-    #cake {
-        display: inline-block;
-    }
-    .graphic {
-        height: 100px;
-        img {
-            min-height: 400px;
-            max-height: 550px;
-        }
-    }
+.lazy-parent {
+    color: $green;
+    font-size:.8rem;
+}  
+#cake {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    padding: 5px 0px;
+}
 </style>

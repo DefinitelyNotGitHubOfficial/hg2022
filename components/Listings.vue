@@ -1,29 +1,50 @@
 <template>
     <div id="listings">
         <div v-if="selectedData.length > 0">
-            <div class="listing" v-for="item in selectedData">
+            <div class="listing" v-for="(item, i) in selectedData" :key="i">
                 <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
-                    <div class="type" v-if="item.type == 'Attraction'"><div><span class="material-symbols-outlined">attractions</span>{{item.type[0]}}</div></div>
-                    <div class="type" v-if="item.type == 'Event'"><div><span class="material-symbols-outlined">festival</span>{{item.type[0]}}</div></div>
-                    <div class="type" v-if="item.type == 'Movie'"><div><span class="material-symbols-outlined mov">movie</span>{{item.type[0]}}</div></div>
+                    <div class="type" v-if="item.type == 'Attraction'"><div>{{item.type[0]}}</div></div>
+                    <div class="type" v-if="item.type == 'Event'"><div>{{item.type[0]}}</div></div>
+                    <div class="type" v-if="item.type == 'Movie'"><div>{{item.type[0]}}</div></div>
                 </div>
                 <div class="title">{{item.title}}</div>
-                <div class="dates">
+                <!-- <div class="dates" v-if="item.displayDates">
                     <span class="material-symbols-outlined">calendar_today</span>{{item.displayDates}}  &nbsp;•&nbsp; 
                     {{item.times}}
+                </div> -->
+                <div class="location2" v-if="item.location">
+                    <span class="material-symbols-outlined">location_on</span>{{item.location}}
                 </div>
+                
                 <div class="desc" @click="expand($event)">{{item.desc}}</div>
-                <div class="link">
+                <div class="meta2" v-if="item.displayDates">
+                    <div class="price2"><span class="material-symbols-outlined">payments</span>{{item.costs}}</div>
+                    <div class="age2"><span class="material-symbols-outlined">escalator_warning</span>{{item.age}}</div>
+                    <div class="link2"><span class="material-symbols-outlined">public</span><a :href="item.url" target="_blank">{{item.website}}</a></div>
+                    <div class="dates2"><span class="material-symbols-outlined">calendar_today</span>{{item.displayDates}} &nbsp;•&nbsp; 
+                    {{item.times}}</div>
+
+                    <div class="tagzone" v-if="item.tags">
+                        <div v-for="(tag, i) in modTags(item.tags)" :key="i" class="tag">
+                            {{tag}}
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="link" v-if="item.website">
                     <span class="material-symbols-outlined mov">link</span>
                     <a :href="item.url" target="_blank">{{item.website}}</a>
-                </div>
-                <div class="meta">
-                    <div class="pill">
+                </div> -->
+                <!-- <div class="meta">
+                    <div class="pill" v-if="item.location">
                         <div><span class="material-symbols-outlined">location_on</span>{{item.location}}</div>
                     </div>
-                    <div class="pill">{{item.costs}}</div>
-                    <div class="pill"><span class="material-symbols-outlined">escalator_warning</span>{{item.age}}</div>
-                </div>
+                    <div class="pill" v-if="item.costs">{{item.costs}}</div>
+                    <div class="pill" v-if="item.age"><span class="material-symbols-outlined">escalator_warning</span>{{item.age}}</div>
+                    <br />
+                    <br />
+                    
+                </div> -->
+                <br />
             </div>
         </div>
         <div v-else>
@@ -51,6 +72,9 @@
                 else{
                     event.target.classList.add("expandme")
                 }
+            },
+            modTags(tags){
+                return tags.split(",")
             }
         }
     }
@@ -76,9 +100,9 @@
         background-size:cover;
     }
     .title {
-        font-size: 1.8rem;
+        font-size: 2rem;
         padding:10px 15px;
-        font-weight: 300;
+        font-weight: 400;
     }
     .type {
         background-color: $green;
@@ -187,5 +211,78 @@
             font-size:1.2rem;
             padding-right:3px;
         }
+    }
+    .tag {
+        display: inline-block;
+        background-color: $green;
+        color: black;
+        padding: 3px 10px;
+        border-radius: 2px;
+        margin: 0px 7px 7px 0px;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+    .location2 {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        font-weight: 400;
+        opacity: 1;
+        font-size: .9rem;
+        .material-symbols-outlined {
+            font-size: 1rem;
+            padding: 0px 5px 0px 10px;
+        }
+    }
+    .price2 {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        font-weight: 400;
+        .material-symbols-outlined {
+            font-size: 1rem;
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    .age2 {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        font-weight: 400;
+        .material-symbols-outlined {
+            font-size: 1rem;
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    .link2 {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        font-weight: 400;
+        a {
+            color: $green;
+            text-decoration: none;
+        }
+        .material-symbols-outlined {
+            font-size: 1rem;
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    .dates2 {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        font-weight: 400;
+        .material-symbols-outlined {
+            font-size: 1rem;
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    .meta2 {
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    .tagzone {
+        padding: 10px 0 0 0;
     }
 </style>
