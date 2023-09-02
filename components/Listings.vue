@@ -51,6 +51,10 @@
             <div class="message">
                 <span class="material-symbols-outlined">report</span>
                 Nothing showing up here.  Try changing the date or filters.</div>
+                <div class="youtube">
+                    Enjoy this video for a monster toy from the '80s in the  meantime.<br /><br />
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/kwqTiKCoFyM?si=oQuAtQ4DO6CvAg9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
         </div>
         <!-- <div v-else>no listings</div> -->
     </div>
@@ -284,5 +288,8 @@
     }
     .tagzone {
         padding: 10px 0 0 0;
+    }
+    .youtube {
+        margin-top: 15px;
     }
 </style>
