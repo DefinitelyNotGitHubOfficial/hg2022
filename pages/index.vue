@@ -17,6 +17,7 @@
       <div class="side">
         <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />  
         <ListingFilter  :sortedData="this.sortedData" :currentData="this.currentData" :selectedDay="this.selectedDay" class="desktop" />
+        <News />
         <div class="c23">
           <a href="https://www.crypticonminneapolis.com" target="_blank">
             <img src="images/crypticon23.jpg" />
