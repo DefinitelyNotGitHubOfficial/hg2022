@@ -1,14 +1,5 @@
 <template>
     <div id="float-header">
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-37KS1X85N3"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-37KS1X85N3');
-        </script>
         <header>
             <div class="brand"><a href="/"><h1>Hairy Ghost</h1></a></div>
             <div class="search">
