@@ -3,9 +3,9 @@
         <div v-if="selectedData.length > 0">
             <div class="listing" v-for="(item, i) in selectedData" :key="i">
                 <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
-                    <div class="type" v-if="item.type == 'Attraction'"><div>{{item.type[0]}}</div></div>
+                    <!-- <div class="type" v-if="item.type == 'Attraction'"><div>{{item.type[0]}}</div></div>
                     <div class="type" v-if="item.type == 'Event'"><div>{{item.type[0]}}</div></div>
-                    <div class="type" v-if="item.type == 'Movie'"><div>{{item.type[0]}}</div></div>
+                    <div class="type" v-if="item.type == 'Movie'"><div>{{item.type[0]}}</div></div> -->
                 </div>
                 <div class="title">{{item.title}}</div>
                 <!-- <div class="dates" v-if="item.displayDates">
