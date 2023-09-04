@@ -14,7 +14,7 @@ export default {
       { property: 'og:title', content: 'Hairy Ghost - Twin Cities Official Guide to Halloween' },
       { property: 'og:url', content: 'https://www.hairyghost.com' },
       { property: 'og:locale', content: 'en_US' },
-      { property: 'og:image', content: 'https://www.hairyghost.com/images/hg-sticker.png'  }
+      { property: 'og:image', content: 'https://www.hairyghost.com/images/hairy-ghost.png'  }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
