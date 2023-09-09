@@ -38,7 +38,7 @@
                 website: "hauntedbasement.org"
             },
             {
-                desc: "Originally in the basement of the Soap Factory (rip)",
+                desc: "The Trail of Terror in Minnesota was one of the state's premier Halloween attractions. Located in Shakopee, it has drawn countless visitors over the years for its variety of spooky and entertaining offerings during the Halloween season.  The Trail of Terror featured a variety of haunted attractions, including haunted mazes, walkthroughs, and themed areas that aim to provide scares for all levels of bravery.  Beyond the haunted attractions, the Trail of Terror offered several interactive activities, such as the Zombie Paintball and more, where attendees can engage in themed fun.  The event typically had live entertainment ranging from stage shows to roaming performers, keeping visitors entertained throughout their visit. Various food vendors are usually present, offering both regular and Halloween-themed treats and drinks.",
                 id: "7667",
                 image: "https://dwgaaoggymvqqcevpzxh.supabase.co/storage/v1/object/public/images/aae2f97c-88d2-4c1f-9dd6-c603fdc6adb6/9d38e82d-79be-405f-9c93-c014926a2a8c",
                 title: "The Trail of Terror"
