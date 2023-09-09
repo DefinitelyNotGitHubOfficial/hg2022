@@ -7,23 +7,24 @@
             <div class="post" @click="goTweet()">
                 <div class="avatar"><img src="https://pbs.twimg.com/profile_images/770340660226306048/m0BySiKD_x96.jpg" /></div>
                 <div class="rest">
-                    <div class="at"><span>Hairy Ghost</span><br />
-                    @HairyGhost&nbsp;•  Sept 2</div>
-                    <div class="content">
+                    <div class="at"><span>Hairy Ghost</span> 
+                    @HairyGhost</div>
+                    <!-- @HairyGhost&nbsp;•  Sept 2</div> -->
+                    <!-- <div class="content">
                         Hairy Ghost has launched a little early this year. The list of events, movies, and attractions may seem a bit on the slender  side right now, but don't let that ghostly appearance fool you! We're  working tirelessly behind the scenes, updating it regularly.
         
-                        <!-- <a href="https://twitter.com/hashtag/SDCC2023?src=hashtag_click" target="_blank">#SDCC2023</a><br />
+                         <a href="https://twitter.com/hashtag/SDCC2023?src=hashtag_click" target="_blank">#SDCC2023</a><br />
                         <a href="https://twitter.com/hashtag/inthemouthofmadness?src=hashtag_click" target="_blank">#inthemouthofmadness</a><br />
                         <a href="https://twitter.com/hashtag/suttercane?src=hashtag_click" target="_blank">#suttercane</a><br />
                         <a href="https://twitter.com/hashtag/horrormovie?src=hashtag_click" target="_blank">#horrormovie</a><br />
-                        <br /> -->
-                        <!-- <div class="timage" style="background-image:url('https://pbs.twimg.com/media/F1fo8PuaUAErPzc?format=jpg&name=small')"></div> -->
+                        <br />
+                        <div class="timage" style="background-image:url('https://pbs.twimg.com/media/F1fo8PuaUAErPzc?format=jpg&name=small')"></div>
                         <div class="meta">
                             <div class="sup"><img src="/images/comment.svg" class="icon"/> 0</div>
                             <div class="sup"><img src="/images/retweet.svg" class="icon"/> 0</div>
                             <div class="sup"><img src="/images/like.svg" class="icon"/> 0</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- <div class="retweet">
@@ -106,7 +107,7 @@
     grid-template-columns: 40px auto;
     font-size: .9rem;
     cursor: pointer;
-    padding-bottom: 15px;
+    // padding-bottom: 15px;
 }
 .avatar {
     
@@ -117,7 +118,9 @@
     }
 }
 .rest {
-    padding-left: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
 }
 #filter {
     background-color: $purple;
@@ -146,7 +149,7 @@
     }
 }
 .updates {
-    padding: 10px 10px 15px 10px;
+    padding: 10px 10px 10px 10px;
     a {
         color: $green;
         font-size: 1rem;
