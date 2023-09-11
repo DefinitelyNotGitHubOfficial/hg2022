@@ -148,7 +148,7 @@
         font-weight:400;
     }
 }
-.updates {
+.updates { 
     padding: 10px 10px 10px 10px;
     a {
         color: $green;
