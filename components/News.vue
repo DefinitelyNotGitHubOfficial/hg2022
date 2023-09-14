@@ -148,8 +148,8 @@
         font-weight:400;
     }
 }
-.updates { 
-    padding: 10px 10px 10px 10px;
+.updates {
+    padding: 10px 10px 10px 9px;
     a {
         color: $green;
         font-size: 1rem;
