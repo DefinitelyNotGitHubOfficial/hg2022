@@ -149,7 +149,7 @@
     }
 }
 .updates {
-    padding: 10px 10px 10px 9px;
+    padding: 10px 10px 10px 10px;
     a {
         color: $green;
         font-size: 1rem;
