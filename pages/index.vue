@@ -24,7 +24,7 @@
           </a>
         </div> -->
         <Graveyard />
-        <News />
+        <News /> 
         <!-- <HauntedDuluth /> -->
         <GrimCities />  
         <!-- <Twitter /> -->
