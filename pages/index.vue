@@ -3,12 +3,12 @@
     <!-- <Countdown /> -->
    
     <TopHat :reformedData="this.reformedData" />  
-    
-    <div class="updatemessage">
+    <div class="offset"></div>
+    <!-- <div class="updatemessage">
       <img src="images/ghosty.svg" />
       Hey Spooky Enthusiasts! Welcome to Hairy Ghost - the official Twin Cities guide to Halloween.<br />
       Our Halloween list of events, movies, and attractions may seem a bit on the slender side right now, but don't let that ghostly appearance fool you! We're working tirelessly behind the scenes, updating it regularly. As the shadows grow longer and we inch closer to October, you can expect to see the list swell with more ghoulish delights. <br />Stay tuned, and thank you for your eerie patience! 
-    </div>
+    </div> -->
     <div class="horibazontabagal">
       <div class="main">
         <WeekView :selectedDay="this.selectedDay" />
@@ -59,10 +59,10 @@
       let date = new Date();
 
 
-      // this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
-      this.today = "2022-09-26" 
-      // this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
-      this.selectedDay = "2022-09-26"
+      this.today = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      // this.today = "2022-09-26" 
+      this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
+      // this.selectedDay = "2022-09-26"
       console.log(this.today)
       console.log(this.selectedDay)
 
@@ -255,5 +255,8 @@
             100% {
                 padding-top: 0px;
             }
+        }
+        .offset {
+          height: 100px;
         }
 </style>
