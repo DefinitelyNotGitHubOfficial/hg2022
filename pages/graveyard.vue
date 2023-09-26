@@ -166,6 +166,7 @@
       margin-bottom: 20px;
       // width: calc(100% - 60px);
       // margin: auto auto 20px auto;
+      //margin: 100%;
    }
   
   </style>
