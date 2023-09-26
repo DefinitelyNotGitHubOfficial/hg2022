@@ -86,7 +86,7 @@
     },
     async fetch() {
       this.listingData = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1WYlDRdtdIXw4Td7wPqKIEajothVgaRakk58ircwPm7U/values/Sheet1?alt=json&key=AIzaSyBg1PKXrS96HD7eevWzVIvYw70TDdO9LLc").then(res => res.json())
-    },
+    }, 
     mounted(){
         //rebuild data to object
       this.listingData.values.forEach((el) => {
