@@ -88,7 +88,7 @@
       this.listingData = await fetch("https://sheets.googleapis.com/v4/spreadsheets/1WYlDRdtdIXw4Td7wPqKIEajothVgaRakk58ircwPm7U/values/Sheet1?alt=json&key=AIzaSyBg1PKXrS96HD7eevWzVIvYw70TDdO9LLc").then(res => res.json())
     }, 
     mounted(){
-        //rebuild data to object
+        //rebuild data to object which is neat
       this.listingData.values.forEach((el) => {
         //remove first listing for imformation management 
         if(el[1] != "Title"){
