@@ -213,5 +213,5 @@ export default {
             color: $green;
             cursor: pointer;
         } 
-    }
+    } 
 </style>
