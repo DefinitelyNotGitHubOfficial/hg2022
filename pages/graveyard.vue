@@ -72,6 +72,12 @@
                 id: "7612",
                 image: "https://dwgaaoggymvqqcevpzxh.supabase.co/storage/v1/object/public/images/aae2f97c-88d2-4c1f-9dd6-c603fdc6adb6/c389c465-8c23-4cb8-92f3-8ca11b915bea",
                 title: "Social Science"
+            },
+            {
+                desc: "The legendary horror experience! Consistently named by local media among the best and scariest haunted attractions in Minnesota. For more than two decades, Fright Farm has provided frightening scenes in a blend of horror, local legend, and folklore for tens of thousands of people. Located among the relics of the Ramsey County Poor Farm and Cemetery in a massive, historic barn, Fright Farm was in the heart of the east metro just one mile south of Highway 36 at White Bear Avenue in Maplewood, Minnesota.",
+                id: "7613",
+                image: "https://dwgaaoggymvqqcevpzxh.supabase.co/storage/v1/object/public/images/aae2f97c-88d2-4c1f-9dd6-c603fdc6adb6/ee530f71-71ba-42b0-9cd0-5ea662b364b1",
+                title: "Fright Farm"
             }
         ]
       }
