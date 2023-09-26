@@ -11,6 +11,7 @@
     </div> -->
     <div class="horibazontabagal">
       <div class="main">
+        <div class="everything"><a href="/everything">Want to see everything at once?</a></div>
         <WeekView :selectedDay="this.selectedDay" />
         <Listings :selectedData="this.sortedData" />
       </div>
@@ -63,8 +64,8 @@
       // this.today = "2022-09-26" 
       this.selectedDay = `20${String(date.getYear()).slice(1,3) }-${(date.getMonth()+1)<10?'0'+(date.getMonth()+1):(date.getMonth()+1)}-${(date.getDate()<10 ? '0'+date.getDate(): date.getDate())}`
       // this.selectedDay = "2022-09-26"
-      console.log(this.today)
-      console.log(this.selectedDay)
+      // console.log(this.today)
+      // console.log(this.selectedDay)
 
       //scroll event
       window.addEventListener("scroll", ()=>{
@@ -259,4 +260,16 @@
         .offset {
           height: 100px;
         }
+        .everything {
+
+        text-align: center;
+        padding-bottom: 15px;
+        a {
+            color: $green;
+            cursor: pointer;
+        } 
+        @include mq(min, 600px){
+          display: none;
+   }
+    }
 </style>

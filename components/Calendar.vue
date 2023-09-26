@@ -58,6 +58,11 @@
             <div class="day november" data="2023-11-04" @click="selectDay('2023-11-04', $event)">4</div>
         </div>
         <Countdown />
+        <div class="everything">
+            <a href="/everything">
+                 Want to see everything at once?
+            </a>
+        </div>
     </div>
 </template>
 <script>
@@ -200,5 +205,13 @@ export default {
     .current {
         background-color: $green;
         color:$black;
+    }
+    .everything {
+        text-align: center;
+        padding-bottom: 5px;
+        a {
+            color: $green;
+            cursor: pointer;
+        } 
     }
 </style>
