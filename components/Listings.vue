@@ -150,7 +150,7 @@
     .desc {
         font-size:1.1rem;
         line-height:1.5rem;
-        // padding:0px 15px 15px 15px;
+        // padding:0px 15px 15px 15px; ;
         padding:0px 15px;
         display: -webkit-box;
         -webkit-line-clamp: 3;
