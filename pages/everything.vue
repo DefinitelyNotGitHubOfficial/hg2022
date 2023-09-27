@@ -32,12 +32,17 @@
                       <input type="checkbox" checked="checked" @click="sort('Movie')">
                       <span class="checkmark"></span>
                     </label>
+                    <hr />
+                    <label class="container">All Ages/ Family Friendly
+                      <input type="checkbox"  @click="sort('all')">
+                      <span class="checkmark"></span>
+                    </label>
                   </form>
                 </div>
               </div>
-              <Graveyard />
-              <News /> 
-              <GrimCities /> 
+              <Graveyard class="mobs" />
+              <News class="mobs" /> 
+
             </div>
         </div>
                 <div id="top" @click="scrollTop()"><span class="material-symbols-outlined">arrow_upward</span>Scroll to top</div>
@@ -94,7 +99,7 @@
               costs: el[6],
               location: el[7],
               type: el[8].split(),
-              age: el[9],
+              age: el[9].toLowerCase(),
               image: el[10],
               website: el[11],
               url: el[12],
@@ -147,14 +152,29 @@
           this.sorts.push(e)
         }
 
+        // console.log(this.sorts)
+
         this.dataBackUp.forEach(e => {
 
           if(this.sorts.includes(e.type.join(""))){
             newCollection.push(e)
           }
         })
+
+
+        //check for family friendly
+        if(this.sorts.includes('all')){
+          let familyFiltered = []
+          newCollection.forEach(e => {
+            if(e.age.includes('all')){
+              familyFiltered.push(e)
+            }
+          })
+          newCollection = familyFiltered
+        }
+
+
         this.reformedData = newCollection
-         //console.log(this.sorts)
 
 
       },
@@ -204,6 +224,17 @@
       grid-template-columns: 100%;
     }
   }
+  .side {
+    @include mq(max, 600px){
+      order: -1;
+      padding: 0px 15px;
+    }
+  }
+  .mobs {
+    @include mq(max, 600px){
+      display: none;
+    }
+  }
   h1 {
       color: $green;
       font-family: 'Creepster', cursive;
@@ -242,6 +273,9 @@
     border-radius:3px;
     overflow:hidden;
     color: $green;
+    @include mq(max, 600px){
+      margin-bottom: 0px;
+    }
 }
 .title {
     padding:4px 0px;
@@ -364,4 +398,14 @@ form {
         padding: 0px 15px;
    }
     }
+  .selections {
+    hr {
+      height:0px;
+      // background-color: $green;
+      padding:0px;
+      border: none;
+      border-bottom:1px dotted $green;
+      opacity: .7;
+    }
+  }
   </style>
