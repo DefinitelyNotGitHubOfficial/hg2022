@@ -3,6 +3,7 @@
         <div v-if="selectedData.length > 0">
             <div class="listing" v-for="(item, i) in selectedData" :key="i">
                 <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
+                    <div class="rec"><span class="material-symbols-outlined">thumb_up</span> Recommended</div>
                     <!-- <div class="type" v-if="item.type == 'Attraction'"><div>{{item.type[0]}}</div></div>
                     <div class="type" v-if="item.type == 'Event'"><div>{{item.type[0]}}</div></div>
                     <div class="type" v-if="item.type == 'Movie'"><div>{{item.type[0]}}</div></div> -->
@@ -291,5 +292,21 @@
     }
     .youtube {
         margin-top: 15px;
+    }
+    .rec {
+        color: black;
+        background-color: $green;
+        display: inline-flex;  
+        padding: 4px 10px;
+        margin-top: 20px;
+        font-weight: 400;
+        align-items: center;
+        box-shadow: 2px 3px 4px 1px rgba(0, 0, 0, 0.4);
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        .material-symbols-outlined {
+            padding-right: 5px;
+            font-size: 1.2rem;
+        }
     }
 </style>
