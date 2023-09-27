@@ -253,6 +253,7 @@
         align-items: center;
         padding-bottom: 10px;
         font-weight: 400;
+        text-transform: capitalize;
         .material-symbols-outlined {
             font-size: 1rem;
             padding: 0px 10px 0px 0px;
