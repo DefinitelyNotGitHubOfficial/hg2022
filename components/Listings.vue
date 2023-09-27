@@ -13,7 +13,7 @@
                     {{item.times}}
                 </div> -->
                 <div class="location2" v-if="item.location">
-                    <span class="material-symbols-outlined">location_on</span>{{item.location}}
+                    <span class="material-symbols-outlined">location_on</span><a :href="'http://www.google.com/maps/search/'+item.location" target="_blank">{{item.location}}</a>
                 </div>
                 
                 <div class="desc" @click="expand($event)">{{item.desc}}</div>
@@ -233,6 +233,10 @@
         font-weight: 400;
         opacity: 1;
         font-size: .9rem;
+        a {
+            color: $green;
+            text-decoration: none;
+        }
         .material-symbols-outlined {
             font-size: 1rem;
             padding: 0px 5px 0px 10px;
