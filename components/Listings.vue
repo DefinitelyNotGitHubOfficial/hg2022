@@ -236,6 +236,9 @@
         a {
             color: $green;
             text-decoration: none;
+            &:hover{
+                color:$highlight;
+            }
         }
         .material-symbols-outlined {
             font-size: 1rem;
