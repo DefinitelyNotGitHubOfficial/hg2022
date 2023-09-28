@@ -227,6 +227,7 @@
         font-weight: 400;
     }
     .location2 {
+        //u
         display: flex;
         align-items: center;
         padding-bottom: 10px;
