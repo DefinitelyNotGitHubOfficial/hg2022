@@ -12,7 +12,6 @@
                 </a>
             </div>
         <div class="horibazontabagal">
-          
             <div class="main">
                 <Listings :selectedData="this.reformedData" />
             </div>
