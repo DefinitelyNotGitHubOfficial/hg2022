@@ -2,7 +2,7 @@
     <div id="listings">
         <div v-if="selectedData.length > 0">
             <div class="listing" v-for="(item, i) in selectedData" :key="i">
-                <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title">
+                <div class="img" :style="{ backgroundImage: `url(${item.image})` }" :alt="item.title" loading="lazy">
                     <!-- <div class="type" v-if="item.type == 'Attraction'"><div>{{item.type[0]}}</div></div>
                     <div class="type" v-if="item.type == 'Event'"><div>{{item.type[0]}}</div></div>
                     <div class="type" v-if="item.type == 'Movie'"><div>{{item.type[0]}}</div></div> -->
@@ -227,7 +227,6 @@
         font-weight: 400;
     }
     .location2 {
-        //u
         display: flex;
         align-items: center;
         padding-bottom: 10px;

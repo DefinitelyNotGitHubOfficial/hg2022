@@ -5,6 +5,7 @@
             
         </div>
         <h1>EVERYTHING</h1>
+        <div class="spec">All {{this.reformedData.length}} Things</div> 
         <div class="goback">
                 <a href="/">
                     <span class="material-symbols-outlined">arrow_back</span>Back calendar view
@@ -242,6 +243,7 @@
       line-height: 2rem;
       text-shadow: 3px 3px 5px rgba(0, 0, 0, .9);
       text-align: center;
+      margin-bottom: 20px;
   }
   #top {
     background-color: $green; 
@@ -407,5 +409,14 @@ form {
       border-bottom:1px dotted $green;
       opacity: .7;
     }
+  }
+  .spec {
+    color: $green;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Creepster', cursive;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, .9);
   }
   </style>
