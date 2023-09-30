@@ -2,7 +2,15 @@
     <div id="listings">
         <div v-if="selectedData.length > 0">
         <div class="item" v-for="(item, i) in selectedData" :key="i">
+            <!-- recommended feature -->
+            <div v-if="item.tags">  
+                <div v-for="(tag, i) in modTags(item.tags)" :key="i" style="position: relative;">
+                    <div class="recommended" v-if="tag.indexOf('recommended') > -1"><span class="material-symbols-outlined">thumb_up</span>Recommended</div>
+                </div>
+            </div>
+
             <img :src="item.image" class="item_hero" loading="lazy"/>
+          
             <div class="inner_item">
                 <div class="item_title">{{item.title}}</div>
                 <div class="item_location"><span class="material-symbols-outlined">pin_drop</span> <a :href="'http://www.google.com/maps/search/'+item.location" target="_blank">{{item.location}}</a></div>
@@ -36,10 +44,10 @@
                     
                 </div>
                 <div class="tagzone" v-if="item.tags">
-                        <div v-for="(tag, i) in modTags(item.tags)" :key="i" class="tag">
-                            {{tag}}
-                        </div>
+                    <div v-for="(tag, i) in modTags(item.tags)" :key="i" class="tag">
+                        {{tag}}
                     </div>
+                </div>
             </div>
         </div>
         </div>
@@ -79,6 +87,13 @@
         //     window.removeEventListener('resize', this.handleResize);
         // },
         methods: {
+            checkVal(e){
+                if(e.indexOf('rec') > 0){
+                    return "fuck"
+                } else {
+                    return "didn't work"
+                }
+            },
             handleResize() {
                 window.width = window.innerWidth;
                 window.height = window.innerHeight;
@@ -101,7 +116,6 @@
         border-radius: 4px;
         overflow: hidden;
         margin-bottom: 30px;
-        border: 1px solid rgb(19, 14, 25);
         @include mq(max, 600px){
             width: calc(100% - 30px);
             margin:0 auto 20px auto;
@@ -230,5 +244,22 @@
     .slight {
         transform: scale(-1, 1);
         padding:0 0 0 5px;
+    }
+    .recommended {
+        position: absolute;
+        background-color: $green;
+        margin-top: 20px;
+        right: 0;
+        padding: 8px 20px;
+        font-weight: 400;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        display: inline-flex;
+        align-items: center;
+        opacity: .9;
+        .material-symbols-outlined {
+            font-size: 1rem;
+            padding-right: 5px;
+        }
     }
 </style>
