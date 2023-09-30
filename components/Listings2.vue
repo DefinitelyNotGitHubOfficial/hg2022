@@ -123,7 +123,7 @@
     }
     .item_hero {
         min-height:100px;
-        max-height: 200px;
+        max-height: 300px;
         width: 100%;
         object-fit: cover;
     }
