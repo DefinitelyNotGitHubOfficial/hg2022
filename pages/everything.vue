@@ -248,6 +248,7 @@
     background-color: $green; 
     color: $purple;
     position: fixed;
+    opacity: .8;
     bottom:0px;
     margin-bottom:-50px;
     left:0px;

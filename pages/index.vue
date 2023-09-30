@@ -188,6 +188,7 @@
   }
   #top {
     background-color: $green; 
+    opacity: .8;
     color: $purple;
     position: fixed;
     bottom:0px;

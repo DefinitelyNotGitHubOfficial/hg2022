@@ -134,8 +134,11 @@
     .item_title {
         text-transform: uppercase;
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding: 5px 0 10px 0;
+        @include mq(max, 600px){
+            font-size: 1.5rem;
+        }
     }
     .item_location {
         display: flex;
@@ -155,6 +158,9 @@
             &:hover {
                 color: salmon;
             }
+        }
+        @include mq(max, 600px){
+            font-size: .8rem;
         }
     }
     .item_desc {
@@ -249,14 +255,13 @@
         position: absolute;
         background-color: $green;
         margin-top: 20px;
-        right: 0;
-        padding: 8px 20px;
+        padding: 8px 20px 8px 15px;
         font-weight: 400;
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
         display: inline-flex;
         align-items: center;
-        opacity: .9;
+        opacity: .8;
         .material-symbols-outlined {
             font-size: 1rem;
             padding-right: 5px;
