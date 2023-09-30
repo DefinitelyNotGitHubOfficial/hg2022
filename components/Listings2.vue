@@ -5,7 +5,7 @@
             <img :src="item.image" class="item_hero" loading="lazy"/>
             <div class="inner_item">
                 <div class="item_title">{{item.title}}</div>
-                <div class="item_location"><span class="material-symbols-outlined">location_on</span> <a :href="'http://www.google.com/maps/search/'+item.location" target="_blank">{{item.location}}</a></div>
+                <div class="item_location"><span class="material-symbols-outlined">pin_drop</span> <a :href="'http://www.google.com/maps/search/'+item.location" target="_blank">{{item.location}}</a></div>
                 <div class="item_desc">
                     {{item.desc}}
                 </div>
@@ -24,11 +24,11 @@
                 <div class="meta">
                     <div class="ageprice">
                         <span class="material-symbols-outlined">payments</span>{{item.costs}}
-                        &nbsp; &nbsp; &nbsp;
-                        <span class="material-symbols-outlined">escalator_warning</span>{{item.age}}
+                        &nbsp;
+                        <span class="material-symbols-outlined slight">escalator_warning</span>{{item.age}}
                     </div>
                     <div class="time">
-                        <span class="material-symbols-outlined">schedule</span>{{item.displayDates}} &nbsp;•&nbsp; {{item.times}}
+                        <span class="material-symbols-outlined">schedule</span>{{item.displayDates}}  &nbsp;•&nbsp; {{item.times}}
                     </div>
                     <div class="web">
                         <span class="material-symbols-outlined">web</span><a :href="'http://'+item.website" target="_blank">{{item.website}}</a>
@@ -97,10 +97,15 @@
 <style lang="scss" scoped>
     .item {
         width: 100%;
-        background-color: #1d182d;
+        background-color: rgba(19, 14, 25, 0.6);
         border-radius: 4px;
         overflow: hidden;
         margin-bottom: 30px;
+        border: 1px solid rgb(19, 14, 25);
+        @include mq(max, 600px){
+            width: calc(100% - 30px);
+            margin:0 auto 20px auto;
+        }
     }
     .item_hero {
         min-height:100px;
@@ -149,7 +154,7 @@
     }
     .expand {
         text-align: center;
-        margin-top: 7px;
+        margin-top: 10px;
     }
     .expand_button {
         border: 1px solid $green;
@@ -207,7 +212,7 @@
         text-transform: capitalize;
     }
     .meta {
-        padding: 15px 0 10px 0;
+        padding: 20px 0 15px 0;
     }
     .tag {
         display: inline-block;
@@ -218,8 +223,12 @@
         border-radius: 3px;
         text-transform: capitalize;
         font-weight: 300;
-        opacity: .9;
+        opacity: .8;
         font-size: .9rem;
         font-weight: 400;
+    }
+    .slight {
+        transform: scale(-1, 1);
+        padding:0 0 0 5px;
     }
 </style>
