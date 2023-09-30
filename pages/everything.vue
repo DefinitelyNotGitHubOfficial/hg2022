@@ -13,7 +13,7 @@
             </div>
         <div class="horibazontabagal">
             <div class="main">
-                <Listings :selectedData="this.reformedData" />
+                <Listings2 :selectedData="this.reformedData" />
             </div>
             <div class="side">
               <div id="filter">

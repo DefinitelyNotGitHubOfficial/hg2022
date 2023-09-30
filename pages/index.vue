@@ -13,7 +13,7 @@
       <div class="main">
         <div class="everything"><a href="/everything">Want to see everything at once?</a></div>
         <WeekView :selectedDay="this.selectedDay" />
-        <Listings :selectedData="this.sortedData" />
+        <Listings2 :selectedData="this.sortedData" />
       </div>
       <div class="side">
         <Calendar :availability="this.availability" :selectedDay="this.selectedDay" class="desktop" />  
