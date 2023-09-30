@@ -243,7 +243,7 @@
         border-radius: 3px;
         text-transform: capitalize;
         font-weight: 300;
-        opacity: .8;
+        opacity: .9;
         font-size: .8rem;
         font-weight: 400;
     }
