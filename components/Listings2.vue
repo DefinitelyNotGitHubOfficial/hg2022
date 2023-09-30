@@ -244,7 +244,7 @@
         text-transform: capitalize;
         font-weight: 300;
         opacity: .8;
-        font-size: .9rem;
+        font-size: .8rem;
         font-weight: 400;
     }
     .slight {
