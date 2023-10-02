@@ -30,16 +30,17 @@
                     <div class="expand_button" @click="expand($event)">Read More</div>
                 </div>
                 <div class="meta">
+                    <div class="time">
+                        <span class="material-symbols-outlined">date_range</span>{{item.displayDates}}  &nbsp;•&nbsp; {{item.times}}
+                    </div>
                     <div class="ageprice">
                         <span class="material-symbols-outlined">payments</span>{{item.costs}}
                         &nbsp;
                         <span class="material-symbols-outlined slight">escalator_warning</span>{{item.age}}
                     </div>
-                    <div class="time">
-                        <span class="material-symbols-outlined">schedule</span>{{item.displayDates}}  &nbsp;•&nbsp; {{item.times}}
-                    </div>
+                    
                     <div class="web">
-                        <span class="material-symbols-outlined">web</span><a :href="'http://'+item.website" target="_blank">{{item.website}}</a>
+                        <span class="material-symbols-outlined">laptop_chromebook</span><a :href="'http://'+item.website" target="_blank">{{item.website}}</a>
                     </div>
                     
                 </div>
