@@ -13,7 +13,9 @@
           
             <div class="inner_item">
                 <div class="item_title">{{item.title}}</div>
-                <div class="item_location"><span class="material-symbols-outlined">pin_drop</span> <a :href="'http://www.google.com/maps/search/'+item.location" target="_blank">{{item.location}}</a></div>
+                <div class="time">
+                        <span class="material-symbols-outlined">date_range</span>{{item.displayDates}}  &nbsp;•&nbsp; {{item.times}}
+                    </div>
                 <div class="item_desc">
                     {{item.desc}}
                 </div>
@@ -30,9 +32,7 @@
                     <div class="expand_button" @click="expand($event)">Read More</div>
                 </div>
                 <div class="meta">
-                    <div class="time">
-                        <span class="material-symbols-outlined">date_range</span>{{item.displayDates}}  &nbsp;•&nbsp; {{item.times}}
-                    </div>
+                    <div class="item_location"><span class="material-symbols-outlined">pin_drop</span> <a :href="'http://www.google.com/maps/search/'+item.location" target="_blank">{{item.location}}</a></div>
                     <div class="ageprice">
                         <span class="material-symbols-outlined">payments</span>{{item.costs}}
                         &nbsp;
@@ -113,10 +113,11 @@
 <style lang="scss" scoped>
     .item {
         width: 100%;
-        background-color: rgba(19, 14, 25, 0.6);
+        background-color: rgba(19, 14, 25, 0.5);
         border-radius: 4px;
         overflow: hidden;
         margin-bottom: 30px;
+        backdrop-filter: blur(2px);
         @include mq(max, 600px){
             width: calc(100% - 30px);
             margin:0 auto 20px auto;
@@ -127,6 +128,7 @@
         max-height: 300px;
         width: 100%;
         object-fit: cover;
+        background-color: black;
     }
     .inner_item {
         padding: 5px 20px 15px 20px;
@@ -144,12 +146,12 @@
     .item_location {
         display: flex;
         align-items: center;
-        padding-bottom: 10px;
-        font-size: .9rem;
+        padding-bottom: 15px;
+        font-size: 1rem;
         font-weight: 400;
         .material-symbols-outlined {
-            font-size: 1rem;
-            padding-right: 5px;
+            font-size: 1.2rem;
+            padding-right: 7px;
         }
         a {
             color: $green;
@@ -228,6 +230,9 @@
                 color: salmon;
             }
         }
+    }
+    .time {
+        padding-bottom: 10px;
     }
     .ageprice {
         text-transform: capitalize;
