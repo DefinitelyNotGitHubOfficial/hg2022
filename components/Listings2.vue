@@ -162,9 +162,9 @@
                 color: salmon;
             }
         }
-        @include mq(max, 600px){
-            font-size: .8rem;
-        }
+        // @include mq(max, 600px){
+        //     font-size: .8rem;
+        // }
     }
     .item_desc {
         font-size: 1rem;
