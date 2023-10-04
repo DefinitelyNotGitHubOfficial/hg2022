@@ -103,7 +103,7 @@
         width:100%;
         max-width:900px;
         margin: 0 auto 20px auto;
-        min-width:400px;
+        min-width:350px;
         width:100%;
         background-color:$purple;
         //border-bottom-left-radius: $sm-rad;
