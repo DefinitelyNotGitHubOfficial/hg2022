@@ -22,13 +22,14 @@
                 <br />
                 <input type="submit" value="Send">
             </form>
-        </div>
+        </div> 
     </div>
 </template>
 <script>
 
 
     export default {
+        
         head() {
             return {
                 script: [
