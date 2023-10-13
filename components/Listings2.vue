@@ -40,7 +40,7 @@
                     </div>
                     
                     <div class="web">
-                        <span class="material-symbols-outlined">laptop_chromebook</span><a :href="'http://'+item.website" target="_blank">{{item.website}}</a>
+                        <span class="material-symbols-outlined">laptop_chromebook</span><a :href="'http://'+item.url" target="_blank">{{item.website}}</a>
                     </div>
                     
                 </div>
