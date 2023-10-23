@@ -14,7 +14,7 @@
         background-image: url("/../../images/hauntedduluth.jpg");
         margin-bottom:20px;
         background-position: 0px -20px; 
-        background-color: $black;   
+        background-color: $black;
         min-height:160px;
         width:calc(100% - 30px);
         font-weight:300; 
