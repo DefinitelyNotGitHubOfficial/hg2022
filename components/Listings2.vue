@@ -57,7 +57,7 @@
                 <span class="material-symbols-outlined">report</span>
                 Nothing showing up here.  Try changing the date or filters.</div>
                 <div class="youtube">
-                    Enjoy this video for a monster toy from the '80s in the  meantime.<br /><br />
+                    Enjoy this video for a toy monster from the '80s in the  meantime.<br /><br />
                     <iframe width="100%" height="400px" src="https://www.youtube.com/embed/kwqTiKCoFyM?si=oQuAtQ4DO6CvAg9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
         </div>
@@ -269,5 +269,22 @@
             font-size: 1rem;
             padding-right: 5px;
         }
+    }
+    .message {
+        color:$purple;
+        background-color: $green;
+        padding:15px;
+        border-radius:4px;
+        font-weight: 300;
+        display:flex;
+        align-items: center;
+        .material-symbols-outlined {
+            font-size:1.2rem;
+            padding-right:3px;
+        }
+    }
+    .youtube {
+        padding: 15px 0;
+        color: $green;
     }
 </style>
